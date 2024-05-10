@@ -315,7 +315,7 @@ WORKDIR /
 EXPOSE 25 587 143 465 993 110 995 4190
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]
-CMD ["setup email add admin.gmail@example.com passwd123"]
+CMD ["./addEmail.sh"]
 
 # These ENVs are referenced in target/supervisor/conf.d/saslauth.conf
 # and must be present when supervisord starts. Introduced by PR:
